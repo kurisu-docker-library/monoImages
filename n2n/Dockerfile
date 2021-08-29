@@ -7,8 +7,8 @@ RUN export DEBIAN_FRONTEND=noninteractive && \
     dpkg-reconfigure -f noninteractive tzdata && \
     apt install git cmake make libssl-dev build-essential -y &&  \
     git clone https://github.com/ntop/n2n.git && \
-    git checkout 2.8-stable && \
     cd n2n && \
+    git checkout 2.8-stable && \
     cmake . && \
     make && \
     make install && \
