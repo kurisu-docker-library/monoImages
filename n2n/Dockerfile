@@ -1,12 +1,19 @@
 FROM ubuntu:20.04
 
-
-RUN apt install git cmake make libssl-dev build-essential -y
-
-RUN git clone https://github.com/ntop/n2n.git
-
-RUN cd n2n && \
+RUN export DEBIAN_FRONTEND=noninteractive && \
+    apt update && \
+    apt install -y tzdata apt-utils && \
+    ln -fs /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
+    dpkg-reconfigure -f noninteractive tzdata && \
+    apt install git cmake make libssl-dev build-essential -y &&  \
+    git clone https://github.com/ntop/n2n.git && \
+    git checkout 2.8-stable && \
+    cd n2n && \
     cmake . && \
-    make \
-    make install
-
+    make && \
+    make install && \
+    rm /root/.cache -rf && \
+    rm -rf /var/cache/apk/* /tmp/* && \
+    apt remove git cmake make build-essential -y && \
+    apt autoremove -y && \
+    apt clean
