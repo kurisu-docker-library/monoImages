@@ -5,7 +5,7 @@ RUN export DEBIAN_FRONTEND=noninteractive && \
     apt install -y tzdata apt-utils && \
     ln -fs /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
     dpkg-reconfigure -f noninteractive tzdata && \
-    apt install git cmake make libssl-dev build-essential -y &&  \
+    apt install git cmake make libssl-dev build-essential openssl -y &&  \
     git clone https://github.com/rofl0r/proxychains-ng.git && \
     cd proxychains-ng && \
     ./configure && \
