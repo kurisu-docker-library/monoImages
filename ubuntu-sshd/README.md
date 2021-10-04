@@ -11,6 +11,8 @@ Dockerized SSH service, built on top of [official Ubuntu](https://registry.hub.d
 - rastasheep/ubuntu-sshd:14.04 (trusty)
 - rastasheep/ubuntu-sshd:16.04 (xenial)
 - rastasheep/ubuntu-sshd:18.04 (bionic)
+- rastasheep/ubuntu-sshd:20.04 
+- rastasheep/ubuntu-sshd:21.04 
 
 ## Installed packages
 
