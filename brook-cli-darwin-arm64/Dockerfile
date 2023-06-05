@@ -1,6 +1,6 @@
 # step 0
 
-FROM ubuntu:latest
+FROM --platform=linux/arm64 ubuntu:latest
 
 USER root
 
