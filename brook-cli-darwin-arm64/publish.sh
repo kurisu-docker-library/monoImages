@@ -4,6 +4,8 @@
 IMAGE_NAME="kurisux/brook-cli"
 TAG="darwin_arm64"  # 你可以修改为你需要的标签
 
+docker rmi -f ${IMAGE_NAME}:${TAG}
+
 # 在当前目录构建Docker镜像
 docker build -t ${IMAGE_NAME}:${TAG} .
 
