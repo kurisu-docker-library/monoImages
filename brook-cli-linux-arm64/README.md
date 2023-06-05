@@ -49,3 +49,9 @@ $ docker run -d -p yourMachinePort:containerPort \
     -p yourPassword
     - --http
 ```
+
+### docker build
+```shell
+echo "{\"experimental\": true}" | sudo tee /etc/docker/daemon.json
+sudo service docker restart
+```
