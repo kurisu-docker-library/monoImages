@@ -15,7 +15,7 @@ RUN chmod a+x ./brook \
 
 # step 1
 
-FROM --platform=linux/arm64/v8 alpine:latest
+FROM --platform=aarch64 alpine:latest
 
 COPY --from=0 /brook /usr/local/bin/
 
