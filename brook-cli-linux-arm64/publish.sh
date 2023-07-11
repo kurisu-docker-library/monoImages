@@ -13,4 +13,4 @@ docker buildx create --use
 docker buildx build --platform linux/arm64 --no-cache -t ${IMAGE_NAME}:${TAG} --push .
 
 # 将镜像推送到Docker Hub
-docker push ${IMAGE_NAME}:${TAG}
+#docker push ${IMAGE_NAME}:${TAG}

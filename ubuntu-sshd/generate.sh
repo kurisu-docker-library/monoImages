@@ -23,6 +23,6 @@ for v in */; do
   docker rmi -f $imageTag
   cd $v
   docker buildx build --platform linux/arm64 --no-cache -t $imageTag --push .
-  docker push $imageTag
+#  docker push $imageTag
   cd -
 done
