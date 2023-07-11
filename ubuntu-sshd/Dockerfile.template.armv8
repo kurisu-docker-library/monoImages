@@ -1,4 +1,4 @@
-FROM ubuntu:%VERSION%
+FROM   --platform=linux/arm64/v8    ubuntu:%VERSION%
 MAINTAINER Aleksandar Diklic "https://github.com/rastasheep"
 
 RUN apt-get update \
